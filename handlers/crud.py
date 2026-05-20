@@ -419,3 +419,4 @@ async def reminder_off_achieved(message: types.Message, user_id, dbase, object_i
         await message.answer(object_info_user.ERROR_DATABASE, result.error)
         return
     await message.answer(object_info_user.REMINDER_OFF_ACHIEVED)
+    return
