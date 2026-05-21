@@ -402,7 +402,7 @@ async def numbering_of_goal_(message: types.Message, user_id, dbase, object_info
         await message.answer(object_info_user.ERROR_DATABASE, result.error)
         return
     if not result.value:
-        await message.answer(object_info_user.NOT_VIEW_WORKOUTS_ALL)
+        await message.answer(object_info_user.NOT_GOAL_WORKOUTS_ALL)
         return
     workout_model_ = '\n'.join(str(Workout(**atr_dict)) for atr_dict in result.value)
     await message.answer(f'{object_info_user.YES_VIEW_GOAL_WORKOUTS_ALL}\n'
